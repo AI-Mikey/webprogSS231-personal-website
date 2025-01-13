@@ -1,37 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personal Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Navigation Styling */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background: #444;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            padding: 0.5rem;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #007BFF;
+            border-radius: 5px;
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style: disc inside;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Personal Profile Web Page</h1>
-<p>
-    <br>About Me
-    <br>My Name is Michael M. Orenze, Im 21 Years old and this is my girlfriend.
-    <br>
-        <img src="https://github.com/AI-Mikey/webprogSS231-personal-website/blob/main/image_2024-12-01_214105505.png?raw=true" alt="Me and Girlfriend" width="400">
-    <br>
-    <br>Education / Achievements:
-    <br>JHS Graduate, SHS Graduate. SHS Honor Student.
-    <br>Course:
-    <br>BSCS-SS, Bachelor of Science in Computer Science with specialization in Software Systems
-    <br>IT Experience:
-    <br>Made a search engine that everytime you search on it 50 times it will plant a tree (This is our first project in APC)
-    <br>Hobbies & Interests:
-    <br>I love to play games and watch anime.
-    <br>
-    <br>I love to spend time with my Girlfriend, Friends, and Family
-    <br>Goal In Life / Dream:
-    <br>My goal in life is to become a successful programmer or game developer and have a wealthy, healthy, happy family in the future with my girlfriend.
-    <hr>
-    <br>Picture Gallery:
-    <br>
-        <img src="https://github.com/AI-Mikey/webprogSS231-personal-website/blob/main/Image/image_2024-12-01_220257636.png?raw=true" alt="Me and Girlfriend" width="400">
-        <img src="https://github.com/AI-Mikey/webprogSS231-personal-website/blob/main/Image/image_2024-12-01_220542495.png?raw=true" alt="Bubu and Dudu" width="400">
-        <img src="https://github.com/AI-Mikey/webprogSS231-personal-website/blob/main/Image/image_2024-12-01_220709048.png?raw=true" alt="Me and Girlfriend" width="400">
-        <img src="https://github.com/AI-Mikey/webprogSS231-personal-website/blob/main/Image/image_2024-12-01_221323296.png?raw=true" alt="Me and Girlfriend" width="400">
-</p>
-
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm [Your Name], a passionate web developer dedicated to crafting user-friendly and visually engaging websites.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project One:</strong> A web app to manage daily tasks efficiently.</li>
+                <li><strong>Project Two:</strong> An e-commerce website for small businesses.</li>
+                <li><strong>Project Three:</strong> A portfolio showcasing my design skills.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
 </body>
 </html>
