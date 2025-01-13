@@ -1,35 +1,39 @@
-/* General Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f4f4f9;
+    background-image: url('https://raw.githubusercontent.com/AI-Mikey/Images/main/wallpapersden.com_new-warframe-2023_1920x960.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 a {
     color: #007BFF;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
 
-/* Header Styling */
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
 }
+
 header h1 {
     font-size: 2.5rem;
 }
 
-/* Navigation Styling */
 nav ul {
     display: flex;
     justify-content: center;
@@ -38,36 +42,40 @@ nav ul {
     margin: 0;
     padding: 0.5rem 0;
 }
+
 nav ul li {
     margin: 0 1rem;
 }
+
 nav ul li a {
     color: #fff;
     padding: 0.5rem;
     transition: background 0.3s;
 }
+
 nav ul li a:hover {
     background: #007BFF;
     border-radius: 5px;
 }
 
-/* Main Content Styling */
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
-    background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
 section {
     margin-bottom: 2rem;
 }
+
 section h2 {
     border-bottom: 2px solid #007BFF;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
+
 ul {
     list-style: disc inside;
 }
@@ -80,25 +88,74 @@ footer {
     padding: 1.5rem 0;
     margin-top: 2rem;
 }
+
 footer p {
     margin: 0.5rem 0;
 }
+
 footer .social-links a {
     margin: 0 0.5rem;
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
 }
+
 footer .social-links a:hover {
     color: #007BFF;
 }
 
 .gallery img {
-    width: 100%;       
-    max-width: 100%;    
-    height: auto;       
-    border-radius: 8px; 
-    object-fit: cover;  
-    margin-bottom: 10px; 
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+
+    footer .social-links a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    .gallery img {
+        margin-bottom: 1.5rem;
+    }
+}
