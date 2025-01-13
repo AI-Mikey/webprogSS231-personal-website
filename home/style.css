@@ -92,3 +92,13 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #007BFF;
 }
+
+.gallery img {
+    width: 100%;       
+    max-width: 100%;    
+    height: auto;       
+    border-radius: 8px; 
+    object-fit: cover;  
+    margin-bottom: 10px; 
+}
+
