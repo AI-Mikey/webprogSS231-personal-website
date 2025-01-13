@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Michael M. Orenze's Personal Website</title>
     <style>
         /* General Styling */
         * {
@@ -90,6 +90,20 @@
         footer p {
             margin: 0;
         }
+
+        /* Gallery Styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -106,7 +120,34 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi! I'm [Your Name], a passionate web developer dedicated to crafting user-friendly and visually engaging websites.</p>
+            <p>
+                My name is <strong>Michael M. Orenze</strong>, I'm 21 years old, and this is my girlfriend.
+            </p>
+            <p>
+                <strong>Education / Achievements:</strong><br>
+                - JHS Graduate, SHS Graduate (Honor Student)<br>
+                <strong>Course:</strong> BSCS-SS (Bachelor of Science in Computer Science with specialization in Software Systems)
+            </p>
+            <p>
+                <strong>IT Experience:</strong><br>
+                - Created a search engine that plants a tree after every 50 searches (Our first project in APC)
+            </p>
+            <p>
+                <strong>Hobbies & Interests:</strong><br>
+                - Playing games and watching anime<br>
+                - Spending time with my girlfriend, friends, and family
+            </p>
+            <p>
+                <strong>Goal In Life / Dream:</strong><br>
+                - To become a successful programmer or game developer<br>
+                - To have a wealthy, healthy, and happy family in the future with my girlfriend
+            </p>
+            <h3>Picture Gallery</h3>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image 1">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image 2">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image 3">
+            </div>
         </section>
         <section id="projects">
             <h2>Projects</h2>
@@ -122,7 +163,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2025 Michael M. Orenze. All rights reserved.</p>
     </footer>
 </body>
 </html>
