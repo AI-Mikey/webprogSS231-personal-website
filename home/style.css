@@ -1,3 +1,4 @@
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -120,15 +121,37 @@ footer .social-links a:hover {
     color: #007BFF;
 }
 
-.gallery img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    margin-bottom: 10px;
+/* Gallery Specific Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
+.gallery figure {
+    margin: 0;
+    text-align: center;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #007BFF;
+}
+
+.gallery figcaption {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Adjustments */
 @media only screen and (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -148,9 +171,8 @@ footer .social-links a:hover {
         padding: 1rem;
     }
 
-    .gallery img {
-        max-width: 100%;
-        margin-bottom: 1rem;
+    .gallery {
+        gap: 10px;
     }
 
     footer {
@@ -171,7 +193,11 @@ footer .social-links a:hover {
         padding: 0;
     }
 
-    .gallery img {
-        margin-bottom: 1.5rem;
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 1rem 0;
     }
 }
