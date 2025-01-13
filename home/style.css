@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-image: url('https://github.com/AI-Mikey/webprogSS231-personal-website/blob/feature/2_MMO_customize_my_website/home/wallpapersden.com_new-warframe-2023_1920x960.jpg');
+    background-image: url('home/wallpapersden.com_new-warframe-2023_1920x960.jpg');
     background-size: cover; /* Make the background image cover the entire page */
     background-position: center;
     opacity: 0.8; /* Set opacity to 80% for the body */
