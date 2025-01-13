@@ -1,3 +1,4 @@
+/* General Styling */
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +8,11 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #000000;
+    color: #fff; /* Default text color set to white */
     background-image: url('https://raw.githubusercontent.com/AI-Mikey/Images/main/wallpapersden.com_new-warframe-2023_1920x960.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-size: cover;  /* Ensures the image covers the entire background */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed;  /* Keeps the image fixed while scrolling */
 }
 
 a {
@@ -23,6 +24,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Header Styling */
 header {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
@@ -34,6 +36,7 @@ header h1 {
     font-size: 2.5rem;
 }
 
+/* Navigation Styling */
 nav ul {
     display: flex;
     justify-content: center;
@@ -58,26 +61,31 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Main Content Styling */
 main {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    color: white; /* Set text color for main content */
 }
 
 section {
     margin-bottom: 2rem;
+    color: white; /* Set section text color to white */
 }
 
 section h2 {
     border-bottom: 2px solid #007BFF;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    color: white; /* Ensure section titles are also white */
 }
 
 ul {
     list-style: disc inside;
+    color: white; /* Ensure list text is white */
 }
 
 /* Footer Styling */
@@ -113,49 +121,53 @@ footer .social-links a:hover {
     margin-bottom: 10px;
 }
 
+/* Media Queries for Responsiveness */
+
+/* When the screen width is 768px or less (tablets and phones in portrait mode) */
 @media only screen and (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem;  /* Make the header smaller */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column;  /* Stack navigation items vertically */
         align-items: center;
     }
 
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0;  /* Space out the navigation links */
     }
 
     main {
-        margin: 1rem;
-        padding: 1rem;
+        margin: 1rem;  /* Reduce the margin for mobile view */
+        padding: 1rem;  /* Padding to make it feel less cramped */
     }
 
     .gallery img {
         max-width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem;  /* Increase spacing for the gallery image */
     }
 
     footer {
-        padding: 1rem 0;
+        padding: 1rem 0;  /* Reduce footer padding */
     }
 
     footer .social-links a {
-        font-size: 1.5rem;
+        font-size: 1.5rem;  /* Increase font size for social icons */
     }
 }
 
+/* When the screen width is 480px or less (phones in portrait mode) */
 @media only screen and (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;  /* Make the header even smaller */
     }
 
     nav ul {
-        padding: 0;
+        padding: 0;  /* Remove any padding for better spacing */
     }
 
     .gallery img {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;  /* Extra space for gallery on smaller screens */
     }
 }
