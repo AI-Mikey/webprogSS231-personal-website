@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> Updated
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Personal Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,6 @@
             <li><a href="#hobbies">Hobbies & Interests</a></li>
             <li><a href="#goal">Goal In Life</a></li>
             <li><a href="#gallery">Picture Gallery</a></li>
-            <li><a href="#guestbook">Guestbook</a></li>
         </ul>
     </nav>
     <main>
@@ -48,28 +48,11 @@
         </section>
         <section id="gallery">
             <h2>Picture Gallery</h2>
-            <div id="gallery-app">
-                <div class="gallery">
-                    <figure v-for="image in images" :key="image.id">
-                        <img :src="image.src" :alt="image.alt">
-                        <figcaption>{{ image.caption }}</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-        <section id="guestbook">
-            <h2>Guestbook</h2>
-            <div id="guestbook-app">
-                <form @submit.prevent="addMessage">
-                    <input type="text" v-model="name" placeholder="Your Name" required>
-                    <textarea v-model="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Sign Guestbook</button>
-                </form>
-                <ul>
-                    <li v-for="entry in guestbook" :key="entry.id">
-                        <strong>{{ entry.name }}</strong>: {{ entry.message }}
-                    </li>
-                </ul>
+            <div id="gallery-vue" class="gallery">
+                <figure v-for="image in images" :key="image.name">
+                    <img :src="image.url" :alt="image.name">
+                    <figcaption>{{ image.name }}</figcaption>
+                </figure>
             </div>
         </section>
     </main>
@@ -78,53 +61,43 @@
         <p>Phone: +63 995 390 6266</p>
         <p>Email: <a href="mailto:mmorenze@student.apc.edu.ph">mmorenze@student.apc.edu.ph</a></p>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/michael-orenze-59753a289/" title="LinkedIn">LinkedIn</a>
-            <a href="https://www.instagram.com/mikeykiddooooo/" title="Instagram">Instagram</a>
-            <a href="https://www.facebook.com/michael.orenze.5" title="Facebook">Facebook</a>
-            <a href="https://github.com/AI-Mikey" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/michael-orenze-59753a289/" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.instagram.com/mikeykiddooooo/" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/michael.orenze.5" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://github.com/AI-Mikey" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
         </div>
         <p>&copy; 2025 Michael M. Orenze. Operator, Tenno.</p>
     </footer>
-
     <script>
-        // Vue.js for Picture Gallery
-        const galleryApp = Vue.createApp({
+        const app = Vue.createApp({
             data() {
                 return {
                     images: [
-                        { id: 1, src: "https://github.com/AI-Mikey/Images/raw/main/wallpapersden.com_new-warframe-2023_1920x960.jpg", alt: "Warframe Image 2023", caption: "Warframe Image 2023" },
-                        { id: 2, src: "https://github.com/AI-Mikey/Images/raw/main/e3483601-12f7-4c74-b285-c32e9e002613.jpg", alt: "Instax Picture", caption: "Instax Picture" },
-                        { id: 3, src: "https://github.com/AI-Mikey/Images/raw/main/8a0826f4-143c-424a-89c4-4638e01b2699.jpg", alt: "UST Pic", caption: "UST Picture" },
-                        { id: 4, src: "https://github.com/AI-Mikey/Images/raw/main/6f8b4ec9-388d-48e9-918a-8ebbb077b4a6.jpg", alt: "Photo Story", caption: "Photo Story" },
-                        { id: 5, src: "https://github.com/AI-Mikey/Images/raw/main/2b43e76c-02dd-4625-bbb3-3b0ff00303a6.jpg", alt: "Manamn Pics", caption: "Manamn Pics" },
+                        {
+                            name: "Warframe Image 2023",
+                            url: "https://github.com/AI-Mikey/Images/raw/main/db7e90aa4e7b882bd39e50ffa30ca2db.jpg"
+                        },
+                        {
+                            name: "Instax Picture",
+                            url: "https://github.com/AI-Mikey/Images/raw/main/e3483601-12f7-4c74-b285-c32e9e002613.jpg"
+                        },
+                        {
+                            name: "UST Pic",
+                            url: "https://github.com/AI-Mikey/Images/raw/main/8a0826f4-143c-424a-89c4-4638e01b2699.jpg"
+                        },
+                        {
+                            name: "Photo Story",
+                            url: "https://github.com/AI-Mikey/Images/raw/main/6f8b4ec9-388d-48e9-918a-8ebbb077b4a6.jpg"
+                        },
+                        {
+                            name: "Manamn Pics",
+                            url: "https://github.com/AI-Mikey/Images/raw/main/2b43e76c-02dd-4625-bbb3-3b0ff00303a6.jpg"
+                        }
                     ]
                 };
             }
-        }).mount('#gallery-app');
-
-        // Vue.js for Guestbook
-        const guestbookApp = Vue.createApp({
-            data() {
-                return {
-                    name: '',
-                    message: '',
-                    guestbook: []
-                };
-            },
-            methods: {
-                addMessage() {
-                    if (this.name && this.message) {
-                        this.guestbook.push({
-                            id: Date.now(),
-                            name: this.name,
-                            message: this.message
-                        });
-                        this.name = '';
-                        this.message = '';
-                    }
-                }
-            }
-        }).mount('#guestbook-app');
+        });
+        app.mount('#gallery-vue');
     </script>
 </body>
 </html>
